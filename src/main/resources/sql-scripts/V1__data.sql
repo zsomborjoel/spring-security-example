@@ -2,7 +2,7 @@ INSERT INTO app_role (id, role_name, description) VALUES (1, 'STANDARD_USER', 'S
 INSERT INTO app_role (id, role_name, description) VALUES (2, 'ADMIN_USER', 'Admin User - Has permission to perform admin tasks');
 
 
-INSERT INTO app_user (id, first_name, last_name, password, username) VALUES (1, 'John', 'Doe', '821f498d827d4edad2ed0960408a98edceb661d9f34287ceda2962417881231a', 'john.doe');
+INSERT INTO app_user (id, first_name, last_name, password, username) VALUES (1, 'Zsombor', 'Gyurkovics', '821f498d827d4edad2ed0960408a98edceb661d9f34287ceda2962417881231a', 'zsombor.gyurkovics');
 INSERT INTO app_user (id, first_name, last_name, password, username) VALUES (2, 'Admin', 'Admin', '821f498d827d4edad2ed0960408a98edceb661d9f34287ceda2962417881231a', 'admin.admin');
 
 
@@ -11,11 +11,9 @@ INSERT INTO user_role(user_id, role_id) VALUES(2,1);
 INSERT INTO user_role(user_id, role_id) VALUES(2,2);
 
 
-INSERT INTO random_city(id, name) VALUES (1, 'Bamako');
-INSERT INTO random_city(id, name) VALUES (2, 'Nonkon');
-INSERT INTO random_city(id, name) VALUES (3, 'Houston');
-INSERT INTO random_city(id, name) VALUES (4, 'Toronto');
-INSERT INTO random_city(id, name) VALUES (5, 'New York');
-INSERT INTO random_city(id, name) VALUES (6, 'Mopti');
-INSERT INTO random_city(id, name) VALUES (7, 'Koulikoro');
-INSERT INTO random_city(id, name) VALUES (8, 'Moscow');
+INSERT INTO credit_card(id, name, number, cvv, expiration_date, balance) VALUES (1, 'Elijah Carter', '4711685971226626', '446', '07/2022', '4633');
+INSERT INTO credit_card(id, name, number, cvv, expiration_date, balance) VALUES (2, 'Tyler Anderson', '4048627761737853', '412', '06/2024', '53531');
+INSERT INTO credit_card(id, name, number, cvv, expiration_date, balance) VALUES (3, 'Jos Jones', '4136049189291772', '220', '02/2022', '4633');
+INSERT INTO credit_card(id, name, number, cvv, expiration_date, balance) VALUES (4, 'Emily Jones', '4601524601485539', '265', '04/2020', '68721');
+INSERT INTO credit_card(id, name, number, cvv, expiration_date, balance) VALUES (5, 'Joseph King', '4666726759807768', '762', '12/2019', '63543');
+INSERT INTO credit_card(id, name, number, cvv, expiration_date, balance) VALUES (6, 'Joseph Collins', '4114627181415451', '860', '07/2021', '4543');

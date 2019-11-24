@@ -1,19 +1,26 @@
-CREATE TABLE random_city (
-  id bigint(20) NOT NULL AUTO_INCREMENT,
+CREATE SCHEMA spring_security;
+
+CREATE TABLE spring_security.credit_card (
+  id bigint NOT NULL,
   name varchar(255) DEFAULT NULL,
+  name varchar(255) DEFAULT NULL,
+  cvv char(3) DEFAULT NULL,
+  expiration_date char(7) DEFAULT NULL,
+  balance bigint
   PRIMARY KEY (id)
 );
 
-CREATE TABLE app_role (
-  id bigint(20) NOT NULL AUTO_INCREMENT,
+
+CREATE TABLE spring_security.role (
+  id bigint NOT NULL,
   description varchar(255) DEFAULT NULL,
   role_name varchar(255) DEFAULT NULL,
   PRIMARY KEY (id)
 );
 
 
-CREATE TABLE app_user (
-  id bigint(20) NOT NULL AUTO_INCREMENT,
+CREATE TABLE spring_security.user (
+  id bigint NOT NULL,
   first_name varchar(255) NOT NULL,
   last_name varchar(255) NOT NULL,
   password varchar(255) NOT NULL,
@@ -22,9 +29,9 @@ CREATE TABLE app_user (
 );
 
 
-CREATE TABLE user_role (
-  user_id bigint(20) NOT NULL,
-  role_id bigint(20) NOT NULL,
-  CONSTRAINT FK859n2jvi8ivhui0rl0esws6o FOREIGN KEY (user_id) REFERENCES app_user (id),
-  CONSTRAINT FKa68196081fvovjhkek5m97n3y FOREIGN KEY (role_id) REFERENCES app_role (id)
+CREATE TABLE spring_security.user_role (
+  user_id bigint NOT NULL,
+  role_id bigint NOT NULL,
+  CONSTRAINT FK_user_id FOREIGN KEY (user_id) REFERENCES app_user (id),
+  CONSTRAINT FK_role_id FOREIGN KEY (role_id) REFERENCES app_role (id)
 );
