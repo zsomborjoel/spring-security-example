@@ -1,4 +1,4 @@
-package com.system.eas.config;
+package com.sprint.security.example.security.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
