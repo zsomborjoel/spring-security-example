@@ -1,4 +1,4 @@
-package com.sprint.security.example.security.config;
+package com.spring.security.example.config;
 
 import java.beans.PropertyVetoException;
 

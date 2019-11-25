@@ -1,4 +1,4 @@
-package com.sprint.security.example.security.model;
+package com.spring.security.example.model;
 
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public class CreditCard {
     @Column(name="name")
     private String name;
 
-    @Column(name="name")
+    @Column(name="number")
     private String number;
 
     @Column(name="cvv")

@@ -1,4 +1,4 @@
-package com.sprint.security.example.security.model;
+package com.spring.security.example.model;
 
 import java.util.Objects;
 
@@ -54,21 +54,6 @@ public class Role {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public Role id(Long id) {
-        this.id = id;
-        return this;
-    }
-
-    public Role roleName(String roleName) {
-        this.roleName = roleName;
-        return this;
-    }
-
-    public Role description(String description) {
-        this.description = description;
-        return this;
     }
 
     @Override
