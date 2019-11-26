@@ -106,7 +106,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         defaultTokenServices.setSupportRefreshToken(true); // refresh token = new valin access token
         return defaultTokenServices;
     }
-    
-    
 
 }
