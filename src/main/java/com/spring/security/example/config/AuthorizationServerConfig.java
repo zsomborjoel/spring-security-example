@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
@@ -46,6 +47,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Autowired
     private AuthenticationManager authenticationManager; // Configuration helper
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
     /**
      * 
      * Configure Authorization
@@ -54,7 +57,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     public void configure(ClientDetailsServiceConfigurer configurer) throws Exception { 
         configurer.inMemory() // sessions stored in memory
                     .withClient(clientId) 
-                    .secret(clientSecret)
+                    .secret(passwordEncoder.encode(clientSecret))
                     .authorizedGrantTypes(grantType)
                     .scopes(scopeRead, scopeWrite)
                     .resourceIds(resourceIds);
