@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "role", schema = "spring_security")
+@Table(name = "roles", schema = "spring_security")
 public class Role {
 
     @Id

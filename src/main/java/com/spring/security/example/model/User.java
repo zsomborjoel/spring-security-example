@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 @Entity
-@Table(name = "user", schema = "spring_security")
+@Table(name = "users", schema = "spring_security")
 public class User {
 
     @Id
@@ -40,7 +40,7 @@ public class User {
     private String lastName;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "user_role",
+    @JoinTable(name = "user_roles", schema = "spring_security",
                 joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
                 inverseJoinColumns =  @JoinColumn(name = "role_id", referencedColumnName = "id"))
     private List<Role> roles;

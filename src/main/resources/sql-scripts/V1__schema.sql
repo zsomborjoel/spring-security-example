@@ -1,6 +1,7 @@
-CREATE SCHEMA spring_security;
+CREATE SCHEMA IF NOT EXISTS spring_security;
 
-CREATE TABLE spring_security.credit_card (
+DROP TABLE IF EXISTS spring_security.credit_cards;
+CREATE TABLE spring_security.credit_cards (
   id bigint NOT NULL,
   name varchar(255) DEFAULT NULL,
   number varchar(255) DEFAULT NULL,
@@ -10,16 +11,16 @@ CREATE TABLE spring_security.credit_card (
   PRIMARY KEY (id)
 );
 
-
-CREATE TABLE spring_security.role (
+DROP TABLE IF EXISTS spring_security.roles;
+CREATE TABLE spring_security.roles (
   id bigint NOT NULL,
   description varchar(255) DEFAULT NULL,
   role_name varchar(255) DEFAULT NULL,
   PRIMARY KEY (id)
 );
 
-
-CREATE TABLE spring_security.user (
+DROP TABLE IF EXISTS spring_security.users;
+CREATE TABLE spring_security.users (
   id bigint NOT NULL,
   first_name varchar(255) NOT NULL,
   last_name varchar(255) NOT NULL,
@@ -28,8 +29,8 @@ CREATE TABLE spring_security.user (
   PRIMARY KEY (id)
 );
 
-
-CREATE TABLE spring_security.user_role (
+DROP TABLE IF EXISTS spring_security.user_roles;
+CREATE TABLE spring_security.user_roles (
   user_id bigint NOT NULL,
   role_id bigint NOT NULL,
   CONSTRAINT FK_user_id FOREIGN KEY (user_id) REFERENCES spring_security.user (id),

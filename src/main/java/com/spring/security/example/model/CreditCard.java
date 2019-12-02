@@ -1,4 +1,4 @@
-package com.spring.security.example.model;
+    package com.spring.security.example.model;
 
 import java.util.Objects;
 
@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "credit_card", schema = "spring_security")
+@Table(name = "credit_cards", schema = "spring_security")
 public class CreditCard {
 
     @Id

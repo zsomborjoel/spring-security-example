@@ -49,6 +49,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
     @Autowired
     private PasswordEncoder passwordEncoder;
+    
     /**
      * 
      * Configure Authorization
