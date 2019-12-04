@@ -33,7 +33,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
         http.requestMatchers() // HttpSecurity to only be invoked when matching
             .and()
             .authorizeRequests()
-            .antMatchers("/actuator/**", "/api-docs/**").permitAll() // Endpoints
-            .antMatchers("/springjwt/**").authenticated(); // Set the OAuth2 request filter order to three in properties (based on hardcoded values)
+            .antMatchers("/").permitAll() // Endpoints
+            .antMatchers("/security/v1/**").authenticated(); // Set the OAuth2 request filter order to three in properties (based on hardcoded values)
     }
 }
