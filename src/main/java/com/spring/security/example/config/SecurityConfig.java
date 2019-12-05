@@ -1,5 +1,7 @@
 package com.spring.security.example.config;
 
+import javax.persistence.EntityManagerFactory;
+
 import com.spring.security.example.service.AppUserDetailsService;
 
 import org.springframework.beans.factory.annotation.Autowired;

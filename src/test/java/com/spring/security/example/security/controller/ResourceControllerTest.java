@@ -39,7 +39,7 @@ public class ResourceControllerTest {
 
     @Test
     public void givenNoToken_whenGetSecureRequest_thenUnauthorized() throws Exception {
-        mockMvc.perform(get("/users")
+        mockMvc.perform(get("/security/v1/users")
         .param("username", "admin.admin").param("password", "jwtpass"))
         .andExpect(status().isUnauthorized());
     }
